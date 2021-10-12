@@ -1,45 +1,50 @@
 @import "./variables";
 
-body{
-    background:$vpBlue;
-    font-family:$fontFam;
- 
+body {
+  background-color: $lgBlueS;
+  font-family: $fontFam;
 }
-header{
-    text-align: center;
-    margin-top: 80px; 
+header {
+  text-align: center;
+  margin-top: 80px;
+  color: $ddBlue;
 }
-h1{
-    font-size: 20px;
-    margin-bottom: 0;
+h1 {
+  font-size: 20px;
+  margin-bottom: 0;
 }
-h2{
-    font-size: 15px;
+h2 {
+  font-size: 15px;
+  text-transform: uppercase;
+  color: $gBlue;
+  letter-spacing: 1.5px;
+text-align: center;
 }
-.wrapper{
+.wrapper {
+}
+#sign-up {
+  font-size: 15px;
+ line-height: 27px;
+  color: $gBlue;
+}
+.wrapper {
+  background-color: white;
+  padding: 20px;
 
+  margin: auto;
 }
-#sign-up{
-    font-size: 15px;
-    margin-top: 10px;
-    color: $gBlue;
-}
-.wrapper{
-    background-color: white;
-    padding: 20px;
- 
-    margin: auto;
-}
-@media(max-width:700px){
-    .wrapper{
-        width:80%;
-        display: flex;
-   flex-direction: column;
-     
-     align-items: center;
-    }
-   
-    #signup{
+@media (max-width: 700px) {
+  .wrapper {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+border-radius: 10px;
+    align-items: center;
+  }
 
-    }
+  #sign-up {
+    width: 65%;
+    margin: 10px auto;
+    margin-bottom: 20px;
+  }
 }

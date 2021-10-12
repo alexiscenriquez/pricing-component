@@ -1,11 +1,12 @@
 body {
-  background: #bdccff;
+  background-color: #eaeefb;
   font-family: "Manrope", sans-serif;
 }
 
 header {
   text-align: center;
   margin-top: 80px;
+  color: #293356;
 }
 
 h1 {
@@ -15,11 +16,15 @@ h1 {
 
 h2 {
   font-size: 15px;
+  text-transform: uppercase;
+  color: #858fad;
+  letter-spacing: 1.5px;
+  text-align: center;
 }
 
 #sign-up {
   font-size: 15px;
-  margin-top: 10px;
+  line-height: 27px;
   color: #858fad;
 }
 
@@ -39,9 +44,15 @@ h2 {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    border-radius: 10px;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+  }
+  #sign-up {
+    width: 65%;
+    margin: 10px auto;
+    margin-bottom: 20px;
   }
 }
 /*# sourceMappingURL=styles.css.map */
