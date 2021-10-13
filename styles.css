@@ -1,12 +1,11 @@
 body {
-  background-color: #eaeefb;
+  background-color: #fafbff;
   font-family: "Manrope", sans-serif;
 }
 
 header {
   text-align: center;
-  margin-top: 80px;
-  color: #293356;
+  color: #858fad;
 }
 
 h1 {
@@ -28,15 +27,73 @@ h2 {
   color: #858fad;
 }
 
+.period {
+  display: inline;
+}
+
+#card {
+  color: #858fad;
+  font-size: 12px;
+  display: -ms-grid;
+  display: grid;
+}
+
 .wrapper {
   background-color: white;
-  padding: 20px;
-  margin: auto;
+  text-align: center;
+  margin: 50px auto;
+}
+
+#price {
+  font-size: 30px;
+  font-weight: 800;
+  color: #293356;
+}
+
+#toggle {
+  width: 45px;
+  height: 25px;
+  background-color: #cdd7ee;
+  border-radius: 50px;
+  position: relative;
+}
+
+#toggle::after {
+  position: absolute;
+  height: 10px;
+  width: 10px;
+  content: "";
+  color: black;
+}
+
+#start {
+  background-color: #293356;
+  color: #bdccff;
+  width: 150px;
+  padding: 10px;
+  border: none;
+  border-radius: 50px;
+  font-size: 12px;
+}
+
+#start:hover {
+  cursor: pointer;
+  color: white;
+}
+
+#options {
+  font-size: 12px;
+}
+
+#top {
+  width: 100%;
+  margin-top: 20px;
+  border-bottom: 2pt solid #fafbff;
 }
 
 @media (max-width: 700px) {
   .wrapper {
-    width: 80%;
+    width: 90%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -48,11 +105,30 @@ h2 {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    max-width: 400px;
   }
   #sign-up {
     width: 65%;
     margin: 10px auto;
     margin-bottom: 20px;
+  }
+  #start {
+    margin: 20px 0 30px 0;
+  }
+  #options {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 20px 0;
+  }
+  #card {
+    width: 100%;
   }
 }
 /*# sourceMappingURL=styles.css.map */

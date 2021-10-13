@@ -1,13 +1,13 @@
 @import "./variables";
 
 body {
-  background-color: $lgBlueS;
+  background-color: $main;
   font-family: $fontFam;
 }
 header {
   text-align: center;
-  margin-top: 80px;
-  color: $ddBlue;
+
+  color: $text;
 }
 h1 {
   font-size: 20px;
@@ -16,35 +16,105 @@ h1 {
 h2 {
   font-size: 15px;
   text-transform: uppercase;
-  color: $gBlue;
+  color: $text;
   letter-spacing: 1.5px;
-text-align: center;
+  text-align: center;
 }
-.wrapper {
-}
+
 #sign-up {
   font-size: 15px;
- line-height: 27px;
-  color: $gBlue;
+  line-height: 27px;
+  color: $text;
+ 
+}
+.period {
+  display: inline;
+}
+#card {
+  color: $text;
+  font-size: 12px;
+  display: grid;
 }
 .wrapper {
   background-color: white;
-  padding: 20px;
+  text-align: center;
+  margin: 50px auto;
+}
+#price {
+  font-size: 30px;
+  font-weight: 800;
+  color: $ddBlue;
+}
 
-  margin: auto;
+
+#toggle {
+  width: 45px;
+  height: 25px;
+  background-color: $toggle;
+  border-radius: 50px;
+  position: relative;
+
+  &::after{
+      position: absolute;
+      height: 10px;
+      width: 10px;
+      content: "";
+      color: black;
+      
+  }
+}
+#start {
+  background-color: $ddBlue;
+  color: $CTA;
+  width: 150px;
+  padding: 10px;
+  border: none;
+  border-radius: 50px;
+  font-size: 12px;
+
+  &:hover {
+    cursor: pointer;
+    color: white;
+  }
+}
+#options {
+font-size: 12px;
+
+}
+#top {
+  width: 100%;
+  margin-top: 20px;
+  
+  border-bottom: 2pt solid $main;
 }
 @media (max-width: 700px) {
   .wrapper {
-    width: 80%;
+    width: 90%;
     display: flex;
     flex-direction: column;
-border-radius: 10px;
+    border-radius: 10px;
     align-items: center;
+    max-width: 400px;
   }
 
   #sign-up {
     width: 65%;
     margin: 10px auto;
     margin-bottom: 20px;
+  }
+
+  #start {
+    margin: 20px 0 30px 0;
+  }
+  #options {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+   padding: 20px 0
+  }
+
+  #card {
+    width: 100%;
   }
 }
