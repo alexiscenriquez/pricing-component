@@ -12,7 +12,6 @@ header {
 h1 {
   font-size: 20px;
   margin-bottom: 0;
-
 }
 h2 {
   font-size: 15px;
@@ -21,12 +20,19 @@ h2 {
   letter-spacing: 1.5px;
   text-align: center;
 }
-
+.check {
+  background: url("images/icon-check.svg");
+  height: 10px;
+  width: 10px;
+  background-size: contain;
+  background-position: center;
+  display: inline-block;
+  margin-right: 5px;
+}
 #sign-up {
   font-size: 15px;
   line-height: 27px;
   color: $text;
- 
 }
 .period {
   display: inline;
@@ -35,13 +41,11 @@ h2 {
   color: $text;
   font-size: 12px;
   display: grid;
-
 }
 .wrapper {
   background-color: white;
   text-align: center;
   margin: 50px auto;
- 
 }
 #price {
   font-size: 30px;
@@ -51,66 +55,66 @@ h2 {
 
 /* The switch - the box around the slider */
 .switch {
-    position: relative;
-    display: inline-block;
-    width: 60px;
-    height: 30px;
-  }
-  
-  /* Hide default HTML checkbox */
-  .switch input {
-    opacity: 0;
-    width: 0;
-    height: 0;
-  }
-  
-  /* The slider */
-  .slider {
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #ccc;
-    -webkit-transition: .4s;
-    transition: .4s;
-  }
-  
-  .slider:before {
-    position: absolute;
-    content: "";
-    height: 22px;
-    width: 22px;
-    left: 4px;
-    bottom: 4px;
-    background-color: white;
-    -webkit-transition: .4s;
-    transition: .4s;
-  }
-  
-  input:checked + .slider {
-    background-color: $sliderBg;
-  }
-  
-  input:focus + .slider {
-    box-shadow: 0 0 1px $sliderBg;
-  }
-  
-  input:checked + .slider:before {
-    -webkit-transform: translateX(26px);
-    -ms-transform: translateX(26px);
-    transform: translateX(26px);
-  }
-  
-  /* Rounded sliders */
-  .slider.round {
-    border-radius: 34px;
-  }
-  
-  .slider.round:before {
-    border-radius: 50%;
-  }
+  position: relative;
+  display: inline-block;
+  width: 55px;
+  height: 30px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 22px;
+  width: 22px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: $sliderBg;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px $sliderBg;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
 
 #start {
   background-color: $ddBlue;
@@ -127,21 +131,48 @@ h2 {
   }
 }
 #options {
-font-size: 12px;
-
+  font-size: 12px;
 }
 #top {
   width: 100%;
   margin-top: 20px;
-  
+
   border-bottom: 2pt solid $main;
 }
 
-#bar{
-    width: 90%;
-    height: 7px;
-    background-color: $eSlider;
+#bar {
+  -webkit-appearance: none;
+  width: 90%;
+  height: 25px;
+  background-color: $eSlider;
+  border-radius: 50px;
+  position: relative;
+  outline: none;
+
+  &::-webkit-slider-thumb {
+    cursor: pointer;
+    background-color: $sliderBg;
+    appearance: none;
+    width: 40px;
+    height: 40px;
     border-radius: 50px;
+    background-image: url("images/icon-slider.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  
+
+  
+  
+}
+.feature {
+  display: inline;
+}
+#discount {
+  background-color: $discountBg;
+  color: $dText;
+  font-weight: 800;
+  padding: 2px 7px;
+  border-radius: 50px;
 }
 @media (max-width: 700px) {
   .wrapper {
@@ -152,7 +183,13 @@ font-size: 12px;
     align-items: center;
     max-width: 400px;
   }
+  h2 {
+    margin-bottom: 50px;
+  }
 
+  #card {
+    max-width: 340px;
+  }
   #sign-up {
     width: 65%;
     margin: 10px auto;
@@ -167,16 +204,20 @@ font-size: 12px;
     width: 100%;
     justify-content: space-around;
     align-items: center;
-   padding: 20px 0
+    padding: 20px 0;
   }
 
   #card {
     width: 100%;
   }
-  #plan{
-      margin-top: 10px;
+  #plan {
+    margin-top: 30px;
   }
-  #bar{
-      margin:auto;
+  #bar {
+    margin: auto;
+  }
+
+  #pricing {
+    margin: 20px 0;
   }
 }

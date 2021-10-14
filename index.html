@@ -26,9 +26,12 @@
 
 
 <div id="card"><section id="top">
-<h2>100k Pageviews</h2> 
-<div id="bar"></div>
-<div id="pricing"><span id="price"></span> /month</div> 
+<h2>100k pageviews</h2> 
+<div class="slidecontainer">
+  <input type="range" id="bar" min="1" max="5">
+</div>
+
+<div id="pricing"><span id="price"></span> / <span id="term"></span></div> 
 <div id="options"><p class="period">Monthly Billing </p> 
   <label class="switch">
     <input type="checkbox">
@@ -38,9 +41,9 @@
 </section>
 
 <section id="plan"> <div id="benefits">
-<p class="feature"><span class="tick"></span> Unlimited websites</p>  
- <p class="feature"><span class="tick"></span> 100% data ownership</p> 
- <p class="feature"><span class="tick"></span> Email reports</p> 
+<p class="feature"><div class="check"></div> Unlimited websites</p>  
+ <p class="feature"><div class="check"></div> 100% data ownership</p> 
+ <p class="feature"><div class="check"></div> Email reports</p> 
 </div>
  <button id="start">Start my trial</button> 
 </section> 
