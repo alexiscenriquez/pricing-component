@@ -1,6 +1,7 @@
 body {
   background-color: #fafbff;
   font-family: "Manrope", sans-serif;
+  height: 100vh;
 }
 
 header {
@@ -137,6 +138,8 @@ input:checked + .slider:before {
 #start:hover {
   cursor: pointer;
   color: white;
+  -webkit-transition: color 0.1s ease;
+  transition: color 0.1s ease;
 }
 
 #options {
@@ -151,16 +154,20 @@ input:checked + .slider:before {
 
 #bar {
   -webkit-appearance: none;
-  width: 90%;
   height: 25px;
   background-color: #eaeefb;
   border-radius: 50px;
   position: relative;
   outline: none;
+  -webkit-transition: 1s;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
 }
 
 #bar::-webkit-slider-thumb {
   cursor: pointer;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
   background-color: #10d5c2;
   -webkit-appearance: none;
           appearance: none;
@@ -170,13 +177,10 @@ input:checked + .slider:before {
   background-image: url("images/icon-slider.svg");
   background-repeat: no-repeat;
   background-position: center;
-  --progress-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2) inset;
-  --progress-flll-shadow: pink;
-  --fill-color: linear-gradient(to right, LightCyan, blue);
-  --thumb-shadow: 0 0 4px rgba(0, 0, 0, 0.3),
-    -3px 9px 9px rgba(255, 255, 255, 0.33) inset,
-    -1px 3px 2px rgba(255, 255, 255, 0.33) inset,
-    0 0 0 99px var(--primary-color) inset;
+}
+
+#bar #term {
+  font-size: 25px;
 }
 
 .feature {
@@ -222,16 +226,17 @@ input:checked + .slider:before {
     margin: 20px 0 30px 0;
   }
   #options {
+    padding: 20px 0;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    width: 100%;
     -ms-flex-pack: distribute;
         justify-content: space-around;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    padding: 20px 0;
+    justify-self: center;
+    width: 100%;
   }
   #card {
     width: 100%;
@@ -241,9 +246,109 @@ input:checked + .slider:before {
   }
   #bar {
     margin: auto;
+    width: 90%;
   }
   #pricing {
     margin: 20px 0;
+  }
+}
+
+@media (min-width: 700px) {
+  .wrapper {
+    width: 50%;
+    padding: 50px 30px 0 30px;
+    max-width: 600px;
+  }
+  #card {
+    margin-top: 20px;
+  }
+  #top {
+    width: 100%;
+    display: -ms-grid;
+    display: grid;
+    height: 300px;
+  }
+  #pricing {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    display: inline-block;
+    -ms-grid-column: 2;
+        grid-column-start: 2;
+    grid-column-end: 3;
+  }
+  h2 {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    -ms-grid-column: 1;
+        grid-column-start: 1;
+    grid-column-end: 2;
+    display: inline;
+  }
+  .slidecontainer {
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+    width: 90%;
+    max-width: 700px;
+    -ms-grid-column-align: center;
+        justify-self: center;
+    -ms-grid-column: 1;
+        grid-column-start: 1;
+    grid-column-end: 3;
+  }
+  #bar {
+    width: 100%;
+  }
+  #options {
+    -webkit-box-ordinal-group: 5;
+        -ms-flex-order: 4;
+            order: 4;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 70%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    -ms-grid-column: 1;
+        grid-column-start: 1;
+    grid-column-end: 3;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    justify-self: center;
+    width: 100%;
+  }
+  #plan {
+    height: 200px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    justify-self: center;
+    width: 100%;
+  }
+  #start {
+    padding: 15px;
+  }
+}
+
+@media (min-height: 1000px) {
+  .wrapper {
+    -webkit-transform: translateY(30%);
+            transform: translateY(30%);
+  }
+  #intro h1, p {
+    font-size: 2em;
   }
 }
 /*# sourceMappingURL=styles.css.map */
