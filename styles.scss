@@ -1,10 +1,10 @@
 @import "./variables";
-@mixin flex{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    justify-self: center;
-    width: 100%;
+@mixin flex {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  justify-self: center;
+  width: 100%;
 }
 body {
   background-color: $main;
@@ -17,8 +17,10 @@ header {
   color: $text;
 }
 h1 {
-  font-size: 20px;
+  font-size: 25px;
+  color: $ddBlue;
   margin-bottom: 0;
+  font-weight: 800;
 }
 h2 {
   font-size: 15px;
@@ -53,7 +55,6 @@ h2 {
   background-color: white;
   text-align: center;
   margin: 50px auto;
-
 }
 #price {
   font-size: 30px;
@@ -88,17 +89,17 @@ h2 {
   -webkit-transition: 0.4s;
   transition: 0.4s;
 
-&:before {
-  position: absolute;
-  content: "";
-  height: 22px;
-  width: 22px;
-  left: 4px;
-  bottom: 4px;
-  background-color: white;
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
-}
+  &:before {
+    position: absolute;
+    content: "";
+    height: 22px;
+    width: 22px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+  }
 }
 input:checked + .slider {
   background-color: $sliderBg;
@@ -170,10 +171,8 @@ input:checked + .slider:before {
     background-repeat: no-repeat;
     background-position: center;
   }
-  #term{
-   
-      font-size: 25px;
-      
+  #term {
+    font-size: 25px;
   }
 }
 .feature {
@@ -223,75 +222,81 @@ input:checked + .slider:before {
     margin-top: 30px;
   }
   #bar {
-    margin: auto;  width: 90%;
+    margin: auto;
+    width: 90%;
   }
 
   #pricing {
     margin: 20px 0;
   }
 }
-@media(min-width:700px){
-  .wrapper{
-width: 50%;
-padding:50px 30px 0 30px;
+@media (min-width: 700px) {
+  .wrapper {
+    width: 50%;
+    padding: 50px 30px 0 30px;
 
-max-width: 600px;
+    max-width: 600px;
   }
-  #card{
-    margin-top: 20px;  
+  #card {
+    margin-top: 20px;
   }
-    #top{
-        width: 100%;
-        display: grid;
-        height: 300px;
-    }
-   #pricing{
-  order: 2;
-  display: inline-block;
-  grid-column-start: 2;
-  grid-column-end: 3;
-   }
-   h2{
-       order: 1;
-       grid-column-start: 1;
-       grid-column-end: 2;
-       display: inline;   
-   }
+  #top {
+    width: 100%;
+    display: grid;
+    height: 300px;
+  }
+  #pricing {
+    order: 2;
+    display: inline-block;
+    grid-column-start: 2;
+    grid-column-end: 3;
+  }
+  h2 {
+    order: 1;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    display: inline;
+  }
 
-   .slidecontainer{
-       order:3;
+  .slidecontainer {
+    order: 3;
     width: 90%;
     max-width: 700px;
     justify-self: center;
     grid-column-start: 1;
     grid-column-end: 3;
-   }
-   #bar{
-       width: 100%;   
-   }
-   #options{
-       order: 4;
-       display: flex;
-width: 70%;
-height: fit-content;
-grid-column-start: 1;
-grid-column-end: 3;
-@include flex();
-   }
-#plan{
+  }
+  #bar {
+    width: 100%;
+  }
+  #options {
+    order: 4;
+    display: flex;
+    width: 70%;
+    height: fit-content;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    @include flex();
+  }
+  #plan {
     height: 200px;
- @include flex();
-}
-#start{
+    @include flex();
+  }
+  #start {
     padding: 15px;
-}
+  }
+
+  #options {
+    max-width: 500px;
+  }
 }
 
-@media (min-height:1000px){
-    .wrapper{
+@media (min-height: 1000px) {
+  .wrapper {
     transform: translateY(30%);
-    }
-    #intro h1,p{
-        font-size:2em;
-    }
+  }
+  #intro h1,
+  p {
+    font-size: 2em;
+  }
 }
