@@ -2,6 +2,7 @@ body {
   font-family: "Manrope", sans-serif;
   background: url("images/bg-pattern.svg");
   background-repeat: no-repeat;
+  background-size: contain;
 }
 
 header {
