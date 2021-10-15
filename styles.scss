@@ -7,14 +7,28 @@
   width: 100%;
 }
 body {
-  background-color: $main;
   font-family: $fontFam;
-  height: 100vh;
+  background: url("images/bg-pattern.svg");
+  background-repeat: no-repeat;
 }
 header {
   text-align: center;
   margin-top: 100px;
   color: $text;
+  position: relative;
+}
+#circles {
+  background-image: url("images/pattern-circles.svg");
+  height: 150px;
+  width: 150px;
+  background-size: contain;
+  position: absolute;
+  background-repeat: no-repeat;
+  top: -50px;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
 }
 h1 {
   font-size: 25px;
@@ -55,6 +69,8 @@ h2 {
   background-color: white;
   text-align: center;
   margin: 50px auto;
+  border-radius: 10px;
+  filter: drop-shadow(10px 5px 10px $eSlider);
 }
 #price {
   font-size: 30px;
@@ -157,8 +173,7 @@ input:checked + .slider:before {
   border-radius: 50px;
   position: relative;
   outline: none;
-  -webkit-transition: 1s;
-  transition: all 1s ease;
+
   &::-webkit-slider-thumb {
     cursor: pointer;
     transition: all 1s ease;
@@ -171,10 +186,14 @@ input:checked + .slider:before {
     background-repeat: no-repeat;
     background-position: center;
   }
-  #term {
-    font-size: 25px;
+  &::-webkit-slider-thumb:active {
+    cursor: grab;
   }
 }
+#term {
+  font-size: 25px;
+}
+
 .feature {
   display: inline;
 }
@@ -184,6 +203,7 @@ input:checked + .slider:before {
   font-weight: 800;
   padding: 2px 7px;
   border-radius: 50px;
+  margin-left: 5px;
 }
 @media (max-width: 700px) {
   .wrapper {
@@ -209,6 +229,7 @@ input:checked + .slider:before {
 
   #start {
     margin: 20px 0 30px 0;
+    font-size: 13px;
   }
   #options {
     padding: 20px 0;
@@ -237,6 +258,7 @@ input:checked + .slider:before {
 
     max-width: 600px;
   }
+
   #card {
     margin-top: 20px;
   }

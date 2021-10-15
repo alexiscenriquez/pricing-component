@@ -13,7 +13,16 @@ const pageviews = {
   5: "1M",
 };
 
+const gradientStyle = {
+  1: "#eaeefb",
+  2: "linear-gradient(90deg, rgba(16,213,194,1) 25%, rgba(234,238,251,1) 25%)",
+  3: "linear-gradient(90deg, rgba(16,213,194,1) 50%, rgba(234,238,251,1) 50%)",
+  4: "linear-gradient(90deg, rgba(16,213,194,1) 75%, rgba(234,238,251,1) 75%)",
+  5: "#10d5c2",
+};
+
 current.onload = currentCost();
+
 current.addEventListener("input", currentCost);
 
 toggle.addEventListener("click", changePeriod);
@@ -88,4 +97,5 @@ function currentCost() {
 
   document.getElementById("term").innerHTML = "/month";
   h2.innerHTML = `${pageviews[current.value]} pageviews`;
+  current.style.background = gradientStyle[current.value];
 }
