@@ -29,10 +29,10 @@ toggle.addEventListener("click", changePeriod);
 
 function changePeriod() {
   if (type === true) {
-    period = "yearly";
+    period = "year";
     type = false;
   } else {
-    period = "monthly";
+    period = "month";
     type = true;
   }
   currentCost();
@@ -40,7 +40,7 @@ function changePeriod() {
 
 function currentCost() {
   if (type == true) {
-    period = "monthly";
+    period = "month";
     switch (current.value) {
       case "1":
         cost = 8;
@@ -64,7 +64,7 @@ function currentCost() {
         break;
     }
   } else {
-    period = "yearly";
+    period = "year";
     switch (current.value) {
       case "1":
         num = 8 * 12;
@@ -95,7 +95,7 @@ function currentCost() {
   }
   price.innerHTML = ` $${cost}.00`;
 
-  document.getElementById("term").innerHTML = "/month";
+  document.getElementById("term").innerHTML ="/"+ period;
   h2.innerHTML = `${pageviews[current.value]} pageviews`;
   current.style.background = gradientStyle[current.value];
 }
